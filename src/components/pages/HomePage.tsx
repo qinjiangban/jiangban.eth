@@ -1,5 +1,4 @@
 import Profile from "@/components/home/Profile";
-import SocialLogo from "@/components/home/SocialLogo";
 import SocialLinks from "@/components/home/SocialLinks";
 import HumanReadableProfile from "@/components/home/HumanReadableProfile";
 import SiteBadge from "@/components/home/SiteBadge";
@@ -13,8 +12,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Profile locale={locale} />
 
         <SocialLinks locale={locale} />
-        <SocialLogo />
-
         <HumanReadableProfile locale={locale} />
         <NavLink locale={locale} />
 
