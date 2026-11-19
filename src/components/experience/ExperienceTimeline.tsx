@@ -21,7 +21,7 @@ import { pick } from "@/lib/i18n/content/types";
 /** 圆点指示器：在时间线上标记一个节点 */
 function TimelineDot({ category }: { category: Experience["category"] }) {
   return (
-    <div className="relative z-10 flex shrink-0 items-center justify-center">
+    <div className="relative z-10 hidden shrink-0 items-center justify-center sm:flex">
       <div
         className={`size-4 rounded-full border-4 ring-4 ring-white ${category === "work"
           ? "border-brand bg-brand/20"
@@ -58,6 +58,10 @@ function ExperienceCard({
     <div className="flex-1 rounded-[20px] border border-white/70 bg-white/95 p-5 shadow-sm ring-black/5 backdrop-blur transition-all duration-300 hover:shadow-md">
       {/* 角色 + 标签 */}
       <div className="mb-2 flex flex-wrap items-center gap-2">
+        <span
+          aria-hidden
+          className="size-2.5 shrink-0 rounded-full bg-brand sm:hidden"
+        />
         {experience.logoSrc && (
           <div className="mr-1 flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-100 bg-white">
             <Image
@@ -235,6 +239,10 @@ function EducationMarker({
   return (
     <div className="flex-1 rounded-[20px] border border-white/70 bg-white/95 p-5 shadow-sm ring-black/5 backdrop-blur">
       <div className="mb-2 flex flex-wrap items-center gap-2">
+        <span
+          aria-hidden
+          className="size-2.5 shrink-0 rounded-full bg-zinc-300 sm:hidden"
+        />
         <span className="text-base font-bold tracking-tight text-foreground">
           {role}
         </span>
@@ -286,12 +294,12 @@ export default function ExperienceTimeline({
   locale: Locale;
 }) {
   return (
-    <div className="relative flex flex-col gap-8 pl-8">
-      {/* 左侧时间线竖线（全局覆盖） */}
-      <div className="absolute left-[7px] top-2 h-full w-0.5 bg-gradient-to-b from-brand/30 via-brand/10 to-zinc-200" />
+    <div className="relative flex flex-col gap-8 sm:pl-8">
+      {/* 左侧时间线竖线（桌面端显示；移动端隐藏，卡片铺满内容宽度） */}
+      <div className="absolute left-[7px] top-2 hidden h-full w-0.5 bg-gradient-to-b from-brand/30 via-brand/10 to-zinc-200 sm:block" />
 
       {experiences.map((exp) => (
-        <div key={exp.id} className="relative flex items-start gap-5">
+        <div key={exp.id} className="relative flex items-start sm:gap-5">
           <TimelineDot category={exp.category} />
 
           {exp.category === "work" ? (
