@@ -7,7 +7,6 @@ import Image from "next/image";
 import type { Locale } from "@/lib/i18n/config";
 import { gratuityContent } from "@/lib/i18n/content/gratuity";
 import { pick } from "@/lib/i18n/content/types";
-import { glassInset, glassPanel } from "@/lib/ui";
 
 const RECIPIENT_ADDRESS = "0x6e5C9aFa78E4a476600279b8dFDa29572e5F2a43";
 const ENS_NAME = "jiangban.eth";
@@ -62,7 +61,7 @@ export default function GratuityPage({ locale }: { locale: Locale }) {
   return (
     <div className="flex min-h-0 flex-1 flex-col items-center justify-center p-4 font-sans selection:bg-brand selection:text-white">
       <main className="flex w-full max-w-125 flex-col items-center gap-4">
-        <div className={`flex w-full flex-col gap-5 rounded-[28px] p-5 sm:p-6 ${glassPanel}`}>
+        <div className="flex w-full flex-col gap-5 rounded-[24px] bg-white p-5 shadow-sm sm:p-6">
           {/* 顶部 */}
           <div className="flex items-center justify-between">
             <BackHome locale={locale} />
@@ -73,12 +72,12 @@ export default function GratuityPage({ locale }: { locale: Locale }) {
           </div>
 
           {/* ENS 与地址复制 */}
-          <div className={`flex flex-col gap-3 rounded-[20px] p-4 ${glassInset}`}>
+          <div className="flex flex-col gap-3 rounded-[16px] border border-zinc-100 bg-zinc-50 p-4">
             <div className="flex flex-col gap-1">
               <label className="text-[11px] font-semibold tracking-wider text-zinc-500">
                 {content.ensLabel}
               </label>
-              <div className="flex items-center justify-between rounded-xl border border-white/60 bg-white/60 p-2.5 backdrop-blur-sm">
+              <div className="flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-2.5">
                 <span className="text-[13px] font-bold text-zinc-800">{ENS_NAME}</span>
                 <button
                   type="button"
@@ -99,7 +98,7 @@ export default function GratuityPage({ locale }: { locale: Locale }) {
               <label className="text-[11px] font-semibold tracking-wider text-zinc-500">
                 {content.evmLabel}
               </label>
-              <div className="flex items-center justify-between rounded-xl border border-white/60 bg-white/60 p-2.5 backdrop-blur-sm">
+              <div className="flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-2.5">
                 <span className="break-all pr-2 font-mono text-[11px] text-zinc-600 sm:text-xs">
                   {RECIPIENT_ADDRESS}
                 </span>
@@ -124,7 +123,7 @@ export default function GratuityPage({ locale }: { locale: Locale }) {
             {content.methods.map((method) => (
               <div
                 key={method.id}
-                className={`rounded-[20px] p-4 ${glassInset}`}
+                className="rounded-[16px] border border-zinc-100 bg-zinc-50 p-4"
               >
                 <div className="mb-3">
                   <h2 className="text-[14px] font-bold text-zinc-800">
@@ -134,7 +133,7 @@ export default function GratuityPage({ locale }: { locale: Locale }) {
                     {pick(method.subtitle, locale)}
                   </p>
                 </div>
-                <div className="mx-auto flex max-w-55 items-center justify-center overflow-hidden rounded-2xl bg-white p-2 shadow-[0_12px_30px_-18px_rgba(93,51,16,0.45)]">
+                <div className="mx-auto flex max-w-55 items-center justify-center overflow-hidden rounded-2xl bg-white p-2">
                   <Image
                     src={method.qr}
                     alt={pick(method.alt, locale)}

@@ -2,7 +2,6 @@ import {  BotIcon, BotOffIcon, CalendarIcon } from "lucide-react";
 import { homeContent } from "@/lib/i18n/content/home";
 import { pick, type LocaleProps } from "@/lib/i18n/content/types";
 import LinkCardArrow from "../ui/LinkCardArrow";
-import { glassInset, glassPanelStrong } from "@/lib/ui";
 
 type Block =
   | { type: "h1"; content: string }
@@ -193,7 +192,7 @@ function ParagraphGroup({
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="grid gap-x-5 gap-y-1 rounded-xl border border-white/55 bg-white/50 p-3 backdrop-blur-sm sm:grid-cols-2">
+    <ul className="grid gap-x-5 gap-y-1 rounded-xl  border-zinc-200 bg-white p-3 sm:grid-cols-2">
       {items.map((item, index) => (
         <li
           key={`${item}-${index}`}
@@ -208,12 +207,12 @@ function BulletList({ items }: { items: string[] }) {
 }
 
 function Divider() {
-  return <div className="h-px w-full bg-zinc-900/10" />;
+  return <div className="h-px w-full bg-zinc-200" />;
 }
 
 function IntroCard({ blocks }: { blocks: Block[] }) {
   return (
-    <div className={`rounded-[24px] p-5 ${glassPanelStrong}`}>
+    <div className="rounded-[20px] border border-zinc-200 bg-white p-5">
       <div className="space-y-3">
         {blocks.map((block, index) => {
           if (block.type === "h1") {
@@ -247,7 +246,7 @@ function IntroCard({ blocks }: { blocks: Block[] }) {
 
 function SubSectionCard({ title, blocks }: SubSection) {
   return (
-    <div className={`space-y-3 rounded-[20px] p-4 ${glassInset}`}>
+    <div className="space-y-3 rounded-[18px] border border-zinc-200 bg-zinc-50/60 p-4">
       {title ? <SubSectionHeading>{title}</SubSectionHeading> : null}
       <div className="space-y-3">
         {blocks.map((block, index) => {
@@ -274,7 +273,7 @@ function SectionCard({ title, blocks }: Section) {
   const groups = splitSubSections(blocks);
 
   return (
-    <div className={`space-y-4 rounded-[24px] p-5 ${glassPanelStrong}`}>
+    <div className="space-y-4 rounded-[20px] border border-zinc-300 bg-white p-5">
       <SectionHeading>{title}</SectionHeading>
       <div className="space-y-3">
         {groups.map((group, index) => (

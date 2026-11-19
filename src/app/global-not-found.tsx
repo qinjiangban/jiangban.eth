@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import "./globals.css";
-import { glassPanel } from "@/lib/ui";
 
 /**
  * 全局 404 页面。
@@ -21,7 +20,7 @@ export default function GlobalNotFound() {
   return (
     <html lang="zh-CN" className="h-full antialiased">
       <body className="flex min-h-full flex-col items-center justify-center px-4 font-sans">
-        <main className={`w-full max-w-md rounded-[28px] p-8 text-center ${glassPanel}`}>
+        <main className="w-full max-w-md rounded-[24px] border border-white/70 bg-white/95 p-8 text-center shadow-xl shadow-brand/10">
           <p className="font-mono text-xs tracking-[0.3em] text-brand">404</p>
           <h1 className="mt-3 text-2xl font-bold tracking-tight text-zinc-900">
             页面未找到
@@ -43,7 +42,7 @@ export default function GlobalNotFound() {
             <Link
               href="/en/"
               hrefLang="en"
-              className="inline-flex h-10 items-center justify-center rounded-full border border-white/60 bg-white/60 px-5 text-sm font-semibold text-zinc-700 backdrop-blur-xl transition-colors hover:border-brand/30 hover:bg-white/85 hover:text-brand"
+              className="inline-flex h-10 items-center justify-center rounded-full border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-700 transition-colors hover:border-brand/30 hover:text-brand"
             >
               English Home
             </Link>

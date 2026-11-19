@@ -3,7 +3,6 @@ import { siteProfile } from "@/lib/site-profile";
 import { ChevronLeftIcon } from "lucide-react";
 import BackHome from "@/components/BackHome";
 import type { Locale } from "@/lib/i18n/config";
-import { glassInset, glassPanel } from "@/lib/ui";
 
 function SectionCard({
   title,
@@ -13,7 +12,7 @@ function SectionCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className={`w-full rounded-[28px] p-6 ${glassPanel}`}>
+    <section className="w-full rounded-[24px] bg-white p-6 shadow-sm">
       <h2 className="mb-4 text-lg font-bold text-black">{title}</h2>
       {children}
     </section>
@@ -25,7 +24,7 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
     <div className="flex flex-1 flex-col items-center p-4 font-sans selection:bg-brand selection:text-white">
       <main className="flex w-full max-w-[760px] flex-col gap-6">
         <BackHome locale={locale} />
-        <section className={`w-full rounded-[32px] p-7 ${glassPanel}`}>
+        <section className="w-full rounded-[28px] bg-white p-7 shadow-sm">
           <div className="mb-4 inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-brand">
             For Agents / 面向智能体
           </div>
@@ -42,25 +41,25 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             <Link
               href="/llms.txt"
-              className="rounded-2xl border border-white/55 bg-white/45 px-4 py-3 text-sm font-medium text-zinc-800 backdrop-blur-sm transition-colors hover:border-brand/40 hover:bg-white/65 hover:text-brand"
+              className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800 transition-colors hover:border-brand hover:text-brand"
             >
               Read `/llms.txt`
             </Link>
             <Link
               href="/agent.json"
-              className="rounded-2xl border border-white/55 bg-white/45 px-4 py-3 text-sm font-medium text-zinc-800 backdrop-blur-sm transition-colors hover:border-brand/40 hover:bg-white/65 hover:text-brand"
+              className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800 transition-colors hover:border-brand hover:text-brand"
             >
               Read `/agent.json`
             </Link>
             <Link
               href="/services.json"
-              className="rounded-2xl border border-white/55 bg-white/45 px-4 py-3 text-sm font-medium text-zinc-800 backdrop-blur-sm transition-colors hover:border-brand/40 hover:bg-white/65 hover:text-brand"
+              className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800 transition-colors hover:border-brand hover:text-brand"
             >
               Read `/services.json`
             </Link>
             <Link
               href="/contact.json"
-              className="rounded-2xl border border-white/55 bg-white/45 px-4 py-3 text-sm font-medium text-zinc-800 backdrop-blur-sm transition-colors hover:border-brand/40 hover:bg-white/65 hover:text-brand"
+              className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm font-medium text-zinc-800 transition-colors hover:border-brand hover:text-brand"
             >
               Read `/contact.json`
             </Link>
@@ -99,7 +98,7 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
             {siteProfile.preferredActions.map((item) => (
               <div
                 key={item.title}
-                className={`rounded-2xl px-4 py-4 ${glassInset}`}
+                className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-4"
               >
                 <div className="text-sm font-semibold text-black">
                   {item.title} / {item.titleZh}
@@ -161,14 +160,14 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
             {siteProfile.services.map((service) => (
               <div
                 key={service.id}
-                className={`rounded-2xl px-4 py-4 ${glassInset}`}
+                className="rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-4"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-sm font-semibold text-black">
                     {service.title} / {service.titleZh}
                   </h3>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-white/70 px-2.5 py-1 text-xs font-medium text-zinc-500">
+                    <span className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-zinc-500">
                       {service.id}
                     </span>
                     <span className="rounded-full bg-brand/10 px-2.5 py-1 text-xs font-medium text-brand">
@@ -195,7 +194,7 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
                   {service.deliverables.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700"
+                      className="rounded-full bg-white px-3 py-1 text-xs font-medium text-zinc-700"
                     >
                       {item}
                     </span>
@@ -234,7 +233,7 @@ export default function ForAgentsPage({ locale }: { locale: Locale }) {
                   {service.optionalAddOns.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-zinc-700"
+                      className="rounded-full bg-white px-3 py-1 text-xs font-medium text-zinc-700"
                     >
                       {item}
                     </span>

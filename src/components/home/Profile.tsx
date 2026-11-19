@@ -5,7 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { localizePath } from "@/lib/i18n/config";
-import { glassPanel } from "@/lib/ui";
 import { homeContent } from "@/lib/i18n/content/home";
 import { pick, type LocaleProps } from "@/lib/i18n/content/types";
 import { cn } from "@/lib/utils";
@@ -14,7 +13,7 @@ export default function Profile({ locale }: LocaleProps) {
   const content = homeContent.profile;
 
   return (
-    <Card className={`relative w-full gap-0 rounded-[28px] py-0 ring-0 bg-transparent ${glassPanel}`}>
+    <Card className="relative w-full gap-0 rounded-[24px] border-white/60 bg-white/95 py-0 shadow-xl shadow-brand/8 ring-black/5 backdrop-blur">
       <CardHeader className="px-6 pt-6 pb-0">
         <Link
           href={localizePath(locale, "/gratuity")}

@@ -20,7 +20,6 @@ import {
   type CapabilityContent,
 } from "@/lib/i18n/content/cooperation";
 import { pick, pickList } from "@/lib/i18n/content/types";
-import { glassControl, glassInteractive, glassPanel } from "@/lib/ui";
 
 /**
  * 核心能力卡片图标：按内容文件的 key 一一映射，
@@ -48,18 +47,18 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
         <div className="flex items-center gap-3">
           <Link
             href={localizePath(locale, "/")}
-            className={`inline-flex size-8 items-center justify-center rounded-full text-zinc-600 hover:text-brand ${glassControl}`}
+            className="inline-flex size-8 items-center justify-center rounded-full border border-white/70 bg-white/90 text-zinc-600 shadow-sm transition-colors hover:bg-white hover:text-brand"
             aria-label={pick(content.backHome, locale)}
           >
             <ArrowLeft className="size-4" />
           </Link>
-          <h1 className="text-xl font-bold tracking-tight text-white">
+          <h1 className="text-xl font-bold tracking-tight text-foreground">
             {pick(content.title, locale)}
           </h1>
         </div>
 
         {/* 关于商务 */}
-        <section className={`rounded-[28px] p-6 ${glassPanel}`}>
+        <section className="rounded-[24px] border border-white/70 bg-white/95 p-6 shadow-sm ring-black/5 backdrop-blur">
           <div className="mb-3 flex items-center gap-3">
             <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand">
               <Briefcase className="size-5" />
@@ -92,7 +91,7 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
 
         {/* 核心能力 */}
         <section>
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-white/80">
+          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-500">
             {pick(content.capabilities.title, locale)}
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
@@ -104,14 +103,14 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
 
         {/* 合适的合作 */}
         <section>
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-white/80">
+          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-500">
             {pick(content.engagements.title, locale)}
           </h2>
           <div className="flex flex-wrap gap-2">
             {pickList(content.engagements.items, locale).map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-white/55 bg-white/50 px-3.5 py-1.5 text-[13px] font-medium text-zinc-700 shadow-sm backdrop-blur-sm transition-colors hover:border-brand/30 hover:text-brand"
+                className="rounded-full border border-zinc-200 bg-white/80 px-3.5 py-1.5 text-[13px] font-medium text-zinc-700 shadow-sm transition-colors hover:border-brand/30 hover:text-brand"
               >
                 {item}
               </span>
@@ -120,7 +119,7 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
         </section>
 
         {/* 联系 */}
-        <section className="rounded-[28px] border border-brand/20 bg-linear-to-br from-white/85 via-white/70 to-brand/10 p-6 shadow-[0_24px_60px_-28px_rgba(93,51,16,0.4),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-xl backdrop-saturate-150">
+        <section className="rounded-[24px] border border-brand/15 bg-linear-to-br from-white/95 to-brand/5 p-6 shadow-sm ring-black/5 backdrop-blur">
           <div className="mb-3 flex items-center gap-3">
             <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-brand text-white shadow-sm shadow-brand/25">
               <Mail className="size-5" />
@@ -192,7 +191,7 @@ function CapabilityCard({
   const Icon = CAPABILITY_ICONS[capability.key];
 
   return (
-    <div className={`flex flex-col rounded-[24px] p-5 ${glassInteractive}`}>
+    <div className="flex flex-col rounded-[20px] border border-white/70 bg-white/95 p-5 shadow-sm ring-black/5 backdrop-blur transition-all duration-300 hover:shadow-md">
       <div className="mb-3 flex items-center gap-3">
         <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand">
           <Icon className="size-5" />

@@ -2,7 +2,6 @@
 import { CalendarIcon, ArrowRightIcon } from "lucide-react"
 import { Card, CardHeader, CardTitle } from "./card"
 import Link from "next/link"
-import { glassInteractive } from "@/lib/ui"
 
 export default function LinkCardArrow({ href, title, icon }: { href: string, title: string, icon: React.ReactNode }) {
     return (
@@ -13,7 +12,7 @@ export default function LinkCardArrow({ href, title, icon }: { href: string, tit
                 className="group block w-full"
                 rel="noreferrer"
             >
-                <Card className={`w-full gap-0 rounded-[20px] py-0 ring-0 bg-transparent group-hover:scale-[1.01] ${glassInteractive}`}>
+                <Card className="w-full gap-0 rounded-[16px] border-white/70 bg-white/95 py-0 shadow-sm ring-black/5 transition-all duration-300 group-hover:scale-[1.01] group-hover:shadow-md">
                     <CardHeader className="relative px-[18px] py-[18px]">
                         <div className="flex items-center">
                             <div className="absolute left-5 flex items-center justify-center text-foreground">

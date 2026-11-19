@@ -15,7 +15,6 @@ import {
 import type { Locale } from "@/lib/i18n/config";
 import { experiencePageContent } from "@/lib/i18n/content/experience";
 import { pick } from "@/lib/i18n/content/types";
-import { glassInteractive, glassPanel } from "@/lib/ui";
 
 /* ============ 子组件 ============ */
 
@@ -56,11 +55,11 @@ function ExperienceCard({
   const description = pick(experience.description, locale);
 
   return (
-    <div className={`flex-1 rounded-[24px] p-5 ${glassInteractive}`}>
+    <div className="flex-1 rounded-[20px] border border-white/70 bg-white/95 p-5 shadow-sm ring-black/5 backdrop-blur transition-all duration-300 hover:shadow-md">
       {/* 角色 + 标签 */}
       <div className="mb-2 flex flex-wrap items-center gap-2">
         {experience.logoSrc && (
-          <div className="mr-1 flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/60 bg-white/70 backdrop-blur-sm">
+          <div className="mr-1 flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full border border-zinc-100 bg-white">
             <Image
               src={experience.logoSrc}
               alt={`${org} logo`}
@@ -165,7 +164,7 @@ function PortfolioGallery({
             type="button"
             onClick={() => setSelectedIndex(i)}
             aria-label={`${pick(experiencePageContent.viewImage, locale)}：${pick(img.alt, locale)}`}
-            className="group overflow-hidden rounded-xl border border-white/55 bg-white/45 backdrop-blur-sm transition-all hover:ring-2 hover:ring-brand/40"
+            className="group overflow-hidden rounded-xl border border-zinc-100 bg-zinc-50 transition-all hover:ring-2 hover:ring-brand/40"
           >
             <Image
               src={thumbSrc(img.src)}
@@ -234,13 +233,13 @@ function EducationMarker({
   const description = pick(experience.description, locale);
 
   return (
-    <div className={`flex-1 rounded-[24px] p-5 ${glassPanel}`}>
+    <div className="flex-1 rounded-[20px] border border-white/70 bg-white/95 p-5 shadow-sm ring-black/5 backdrop-blur">
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <span className="text-base font-bold tracking-tight text-foreground">
           {role}
         </span>
         {type && (
-          <span className="inline-flex h-5 items-center rounded-full border border-white/55 bg-white/50 px-2.5 text-[11px] font-medium text-zinc-500">
+          <span className="inline-flex h-5 items-center rounded-full border border-zinc-300 bg-zinc-50 px-2.5 text-[11px] font-medium text-zinc-500">
             {type}
           </span>
         )}
