@@ -57,7 +57,7 @@ const pageMeta: Record<Locale, Record<PageKey, PageMeta>> = {
     gratuity: {
       title: "打赏与支持 - Jiangban Qin",
       description:
-        "通过加密货币（ETH / Base 等 EVM 网络）、微信支付或 PayPal 打赏支持 Jiangban Qin。",
+        "通过加密货币（EVM 兼容主流网络，支持 ETH / USDC / USDT）或 PayPal 打赏支持 Jiangban Qin。",
     },
     forAgents: {
       title: "面向智能体 - Jiangban Qin",
@@ -84,7 +84,7 @@ const pageMeta: Record<Locale, Record<PageKey, PageMeta>> = {
     gratuity: {
       title: "Gratuity & Support - Jiangban Qin",
       description:
-        "Support Jiangban Qin with crypto on EVM networks (Ethereum, Base), WeChat Pay, or PayPal.",
+        "Support Jiangban Qin with crypto on EVM-compatible networks (ETH, USDC, USDT) or PayPal.",
     },
     forAgents: {
       title: "For Agents - Jiangban Qin",

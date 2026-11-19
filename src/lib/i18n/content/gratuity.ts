@@ -34,21 +34,11 @@ export const gratuityContent = {
       id: "crypto",
       title: { zh: "加密货币", en: "Cryptocurrency" },
       subtitle: {
-        zh: "EVM 主流网络（ETH / Base 等）",
-        en: "Major EVM networks (Ethereum, Base, etc.)",
+        zh: "EVM 兼容主流网络（ETH / USDC / USDT）",
+        en: "EVM-compatible networks (ETH / USDC / USDT)",
       },
       qr: "/QR/0x.png",
       alt: { zh: "区块链地址二维码", en: "Blockchain address QR code" },
-    },
-    {
-      id: "wechat",
-      title: { zh: "微信支付", en: "WeChat Pay" },
-      subtitle: {
-        zh: "扫一扫二维码打赏",
-        en: "Scan the QR code with WeChat to support",
-      },
-      qr: "/QR/wechatpay-qr.png",
-      alt: { zh: "微信支付二维码", en: "WeChat Pay QR code" },
     },
     {
       id: "paypal",
