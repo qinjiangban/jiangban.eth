@@ -7,7 +7,6 @@ import { siteProfile } from "@/lib/site-profile";
 const SAME_AS = [
   "https://x.com/qinjiangban",
   "https://github.com/qinjiangban",
-  "https://www.youtube.com/@qinjiangban",
   "https://farcaster.xyz/qinjiangban",
   "https://hey.xyz/u/jiangban",
   "https://zora.co/@qinjiangban",

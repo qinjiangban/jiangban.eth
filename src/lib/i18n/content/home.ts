@@ -4,7 +4,7 @@ import type { LocalizedText } from "./types";
  * 首页全部双语文案。
  *
  * 中文为默认语言（根路径 `/`），英文为完整翻译（`/en`）。专有名词
- * （Jiangban Qin、覃江扮、jiangban.eth、X、Github、YouTube、Farcaster、
+ * （Jiangban Qin、覃江扮、jiangban.eth、X、Github、Farcaster、
  * Lens、Zora、ENS、IPFS、coolha）在两种语言中保持原样，不做翻译。
  */
 

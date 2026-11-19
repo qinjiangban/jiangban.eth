@@ -93,7 +93,6 @@ export const siteProfile = {
     { label: "Website", href: "https://jiangban.eth.limo" },
     { label: "X", href: "https://x.com/qinjiangban" },
     { label: "GitHub", href: "https://github.com/qinjiangban" },
-    { label: "YouTube", href: "https://www.youtube.com/@qinjiangban" },
     { label: "ENS", href: "https://app.ens.domains/jiangban.eth" },
   ],
   services: [

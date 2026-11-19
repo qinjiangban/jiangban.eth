@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { GitHubIcon, WeChatIcon, YouTubeIcon, XBrandIcon, ShipinhaoIcon } from "@/components/icons";
+import { GitHubIcon, WeChatIcon, XBrandIcon, ShipinhaoIcon } from "@/components/icons";
 import { homeContent } from "@/lib/i18n/content/home";
 import { pick, type LocaleProps } from "@/lib/i18n/content/types";
 import LinkCard from "../ui/LinkCard";
@@ -29,11 +29,6 @@ export default function SocialLinks({ locale }: LocaleProps) {
       href: "https://github.com/qinjiangban",
       title: "Github",
       icon: <GitHubIcon className="w-6 h-6 text-black" />,
-    },
-    {
-      href: "https://www.youtube.com/@qinjiangban",
-      title: "YouTube",
-      icon: <YouTubeIcon className="w-6 h-6 text-[#FF0000]" />,
     },
     {
       onClick: () => setIsChannelsModalOpen(true),
