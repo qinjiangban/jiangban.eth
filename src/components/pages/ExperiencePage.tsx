@@ -26,14 +26,14 @@ export default function ExperiencePage({ locale }: { locale: Locale }) {
           >
             <ChevronLeftIcon className="size-4" />
           </Link>
-          <h1 className="text-xl font-bold tracking-tight text-foreground">
+          <h1 className="text-xl font-bold tracking-tight text-white">
             {pick(content.title, locale)}
           </h1>
         </div>
 
         {/* 工作经历 */}
         <section>
-          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white/80">
             {pick(content.workHeading, locale)}
           </h2>
           <ExperienceTimeline experiences={workExperiences} locale={locale} />
@@ -41,7 +41,7 @@ export default function ExperiencePage({ locale }: { locale: Locale }) {
 
         {/* 教育背景 */}
         <section>
-          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white/80">
             {pick(content.educationHeading, locale)}
           </h2>
           <ExperienceTimeline experiences={educationExperiences} locale={locale} />

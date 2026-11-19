@@ -53,7 +53,7 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
           >
             <ArrowLeft className="size-4" />
           </Link>
-          <h1 className="text-xl font-bold tracking-tight text-foreground">
+          <h1 className="text-xl font-bold tracking-tight text-white">
             {pick(content.title, locale)}
           </h1>
         </div>
@@ -92,7 +92,7 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
 
         {/* 核心能力 */}
         <section>
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-white/80">
             {pick(content.capabilities.title, locale)}
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
@@ -104,7 +104,7 @@ export default function CooperationPage({ locale }: { locale: Locale }) {
 
         {/* 合适的合作 */}
         <section>
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-5 text-sm font-semibold uppercase tracking-wider text-white/80">
             {pick(content.engagements.title, locale)}
           </h2>
           <div className="flex flex-wrap gap-2">

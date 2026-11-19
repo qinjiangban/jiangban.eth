@@ -48,7 +48,11 @@
 }
 
 body {
-  background: linear-gradient(180deg, #ea7411 0%, #fff3eb 100%);
+  background-color: #ea7411;
+  background-image:
+    radial-gradient(56rem 36rem at 18% -8%, #f7a35f 0%, rgba(247, 163, 95, 0) 62%),
+    radial-gradient(48rem 32rem at 92% 6%, #f08a2e 0%, rgba(240, 138, 46, 0) 58%),
+    linear-gradient(180deg, #ef7f1f 0%, #ea7411 48%, #d9650b 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
