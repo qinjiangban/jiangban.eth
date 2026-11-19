@@ -47,16 +47,32 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+html {
+  background-color: #5c3a26;
+  overscroll-behavior: none;
+}
+
 body {
-  background-color: #ea7411;
-  background-image:
-    radial-gradient(56rem 36rem at 18% -8%, #f7a35f 0%, rgba(247, 163, 95, 0) 62%),
-    radial-gradient(48rem 32rem at 92% 6%, #f08a2e 0%, rgba(240, 138, 46, 0) 58%),
-    linear-gradient(180deg, #ef7f1f 0%, #ea7411 48%, #d9650b 100%);
-  background-attachment: fixed;
+  position: relative;
+  background: transparent;
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  min-height: 100dvh;
+  overscroll-behavior: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #e0711a;
+  background-image:
+    radial-gradient(56rem 36rem at 18% -8%, #f7a35f 0%, rgba(247, 163, 95, 0) 62%),
+    radial-gradient(48rem 32rem at 92% 6%, #f08a2e 0%, rgba(240, 138, 46, 0) 58%),
+    linear-gradient(180deg, #ef7f1f 0%, #e0711a 46%, #d9650b 100%);
 }
 
 :root {

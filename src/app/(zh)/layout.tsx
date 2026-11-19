@@ -13,7 +13,7 @@ export const metadata: Metadata = buildRootMetadata("zh");
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#EA7411",
+  themeColor: "#B45309",
 };
 
 export default function ZhRootLayout({
