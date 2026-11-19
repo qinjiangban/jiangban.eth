@@ -35,7 +35,7 @@ export default function QRCodeModal({
         if (!open) onClose();
       }}
     >
-      <DialogContent className="max-w-sm rounded-[28px] border-white/70 bg-white/95 p-8 shadow-2xl shadow-black/10">
+      <DialogContent className="max-w-sm rounded-[32px] border-white/60 bg-white/80 p-8 shadow-2xl shadow-black/15 backdrop-blur-2xl backdrop-saturate-150">
         <DialogHeader className="items-center text-center">
           <div className="flex size-12 items-center justify-center rounded-2xl bg-[#07C160]/10 text-[#07C160]">
             <WeChatIcon className="size-7" />

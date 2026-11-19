@@ -7,6 +7,7 @@ import { localizePath } from "@/lib/i18n/config";
 import type { Locale } from "@/lib/i18n/config";
 import { experiencePageContent } from "@/lib/i18n/content/experience";
 import { pick } from "@/lib/i18n/content/types";
+import { glassControl } from "@/lib/ui";
 
 export default function ExperiencePage({ locale }: { locale: Locale }) {
   const content = experiencePageContent;
@@ -20,7 +21,7 @@ export default function ExperiencePage({ locale }: { locale: Locale }) {
         <div className="flex items-center gap-3">
           <Link
             href={localizePath(locale, "/")}
-            className="inline-flex size-8 items-center justify-center rounded-full border border-white/70 bg-white/90 text-zinc-600 shadow-sm transition-colors hover:bg-white hover:text-brand"
+            className={`inline-flex size-8 items-center justify-center rounded-full text-zinc-600 hover:text-brand ${glassControl}`}
             aria-label={pick(content.backHome, locale)}
           >
             <ChevronLeftIcon className="size-4" />

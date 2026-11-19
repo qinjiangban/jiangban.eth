@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "lucide-react";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { glassInteractive } from "@/lib/ui";
 
 interface LinkCardProps {
   href?: string;
@@ -13,7 +14,7 @@ interface LinkCardProps {
 
 export default function LinkCard({ href, title, icon, onClick }: LinkCardProps) {
   const content = (
-    <Card className="w-full gap-0 rounded-[16px] border-white/70 bg-white/95 py-0 shadow-sm ring-black/5 transition-all duration-300 group-hover:scale-[1.01] group-hover:shadow-md">
+    <Card className={`w-full gap-0 rounded-[20px] py-0 ring-0 bg-transparent group-hover:scale-[1.01] ${glassInteractive}`}>
       <CardHeader className="relative px-[18px] py-[18px]">
         <div className="flex items-center">
           <div className="absolute left-5 flex items-center justify-center text-foreground">
