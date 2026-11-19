@@ -32,7 +32,7 @@ export default function ExperiencePage({ locale }: { locale: Locale }) {
 
         {/* 工作经历 */}
         <section>
-          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white drop-shadow-sm">
             {pick(content.workHeading, locale)}
           </h2>
           <ExperienceTimeline experiences={workExperiences} locale={locale} />
@@ -40,7 +40,7 @@ export default function ExperiencePage({ locale }: { locale: Locale }) {
 
         {/* 教育背景 */}
         <section>
-          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-wider text-white drop-shadow-sm">
             {pick(content.educationHeading, locale)}
           </h2>
           <ExperienceTimeline experiences={educationExperiences} locale={locale} />
