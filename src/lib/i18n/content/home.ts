@@ -132,13 +132,13 @@ export const homeContent: HomeContent = {
   humanReadableProfile: {
     profileText: {
       zh: `# Jiangban Qin 覃江扮
-2002年射手座生于广西，MBTI:INFJ
+2002年射手座生于中国广西，MBTI:INFJ
 语言:简体中文、壮语、桂柳话（西南官话分支）
 
 兴趣爱好:NBA篮球，绘画、影视、看书学毛选、易经思维、太极哲学、中医养生、科技商业学习乔布斯创新与伊隆马斯克的第一性原理，培养金融与投资思维。
 毕业于南宁职业技术大学商学院市场营销专业，2020年上高中时上网接触到Bitcoin，学习区块链知识，上大学后不影响学业情况下自学区块链相关技术，开发DAPP网站，2022年GPT时刻后，AI兴起并利用AI辅助学习。并独立开发多个DAPP：去中心化社交平台、Swap平台、NFT销售、区块链小游戏、RWA、AIAgent等。`,
       en: `# Jiangban Qin 覃江扮
-Born in Guangxi in 2002, Sagittarius, MBTI: INFJ
+Born in Guangxi, China in 2002, Sagittarius, MBTI: INFJ
 Languages: Simplified Chinese, Zhuang, Guiliu dialect (a branch of Southwestern Mandarin)
 
 Interests: NBA basketball, painting, film and television, reading and studying Selected Works of Mao Zedong, I Ching thinking, Tai Chi philosophy, traditional Chinese medicine wellness, and studying technology and business through Steve Jobs' innovation and Elon Musk's first principles, while cultivating financial and investment thinking.

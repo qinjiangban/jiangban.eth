@@ -57,8 +57,8 @@ export const experiences: Experience[] = [
     location: { zh: "香港", en: "Hong Kong" },
     locationType: { zh: "远程办公", en: "Remote" },
     description: {
-      zh: "Coolha 酷哈是一个专注于Web3技术开发和应用的科技公司，致力于探索和应用前沿技术，提供更好的产品服务和解决方案，希望通过技术改变生产关系，让数据信息可拥有、可信任、有价值，让世界连接Web4",
-      en: "Coolha is a technology company focused on Web3 technology development and applications. It is dedicated to exploring and applying frontier technologies to provide better products, services, and solutions, and hopes to transform production relations through technology — making data and information ownable, trustworthy, and valuable — so the world connects to Web4.",
+      zh: "Coolha 酷哈 2025年注册于中国香港，专注Web3区块链技术应用开发和前沿技术应用，希望通过技术改变生产关系和提高生产力，为世界文明进步做贡献，让数据信息可拥有、可信任、有价值，构建Web4 A2A经济。",
+      en: "Coolha was registered in Hong Kong, China in 2025, focusing on the development and application of Web3 blockchain technology and frontier technologies. It hopes to transform production relations and improve productivity through technology, contribute to the progress of world civilization, make data and information ownable, trustworthy, and valuable, and build a Web4 A2A economy.",
     },
     link: { url: "https://coolha.com/", label: "coolha.com" },
     category: "work",
