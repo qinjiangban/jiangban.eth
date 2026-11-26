@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
     logoSrc: "https://coolha.com/favicon.ico",
     type: { zh: "正式", en: "Full-time" },
     from: { zh: "2025年8月", en: "Aug 2025" },
-    to: null,
+    to: { zh: "2026年11月", en: "Nov 2026" },
     location: { zh: "香港", en: "Hong Kong" },
     locationType: { zh: "远程办公", en: "Remote" },
     description: {
@@ -77,7 +77,7 @@ export const experiences: Experience[] = [
     type: { zh: "正式", en: "Full-time" },
     from: { zh: "2025年3月", en: "Mar 2025" },
     to: { zh: "2025年10月", en: "Oct 2025" },
-    duration: { zh: "8 个月", en: "8 months" },
+    duration: { zh: "7 个月", en: "7 months" },
     location: { zh: "中国 广东省 深圳", en: "Shenzhen, Guangdong, China" },
     locationType: { zh: "现场办公", en: "On-site" },
     description: {

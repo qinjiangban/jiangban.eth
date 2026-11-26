@@ -10,16 +10,10 @@ import type { LocalizedText } from "./types";
 
 /** 首页所有双语文案的结构定义，保证中文与英文一一对应、不漏翻 */
 export type HomeContent = {
-  /** 个人名片 */
+  /** 个人简介卡 */
   profile: {
-    /** 右上角打赏按钮 */
+    /** 姓名右侧的打赏入口 */
     gratuityLabel: LocalizedText;
-    /** 名片正文第一行前缀（含 emoji） */
-    createPrefix: LocalizedText;
-    /** 第一行中的 coolha.com 链接文字：专有名词，两种语言一致 */
-    createLinkLabel: string;
-    /** 名片正文第二行（含 emoji） */
-    secondHighlight: LocalizedText;
   };
 
   /** 社交 / 媒体入口；入口名称与二维码弹窗文案 */
@@ -44,6 +38,29 @@ export type HomeContent = {
     cooperation: LocalizedText;
   };
 
+  /** 首页底部的项目展示区 */
+  projects: {
+    /** 区块标题 */
+    title: LocalizedText;
+    /** coolha.com：我创建的产品，外链 */
+    coolha: {
+      title: string;
+      tag: LocalizedText;
+      href: string;
+    };
+    /** 太极数字极简主义：设计哲学技能，外链 */
+    taiji: {
+      title: LocalizedText;
+      tag: LocalizedText;
+      href: string;
+    };
+    /** 智能体商家架构师：Agent 专家 */
+    agentMerchant: {
+      title: LocalizedText;
+      tag: LocalizedText;
+    };
+  };
+
   /** 页面底部站点标识 */
   siteBadge: {
     /** ENS 网关访问说明：前缀 + 域名 + 后缀 */
@@ -64,15 +81,6 @@ export const homeContent: HomeContent = {
     gratuityLabel: {
       zh: "打赏",
       en: "Gratuity",
-    },
-    createPrefix: {
-      zh: "🟩 创建",
-      en: "🟩 create",
-    },
-    createLinkLabel: "coolha.com↗",
-    secondHighlight: {
-      zh: "🟧 Web4 建设开发者",
-      en: "🟧 web4 build developer",
     },
   },
 
@@ -111,6 +119,42 @@ export const homeContent: HomeContent = {
     cooperation: {
       zh: "商务合作",
       en: "Business Cooperation",
+    },
+  },
+
+  projects: {
+    title: {
+      zh: "项目展示",
+      en: "Projects",
+    },
+    coolha: {
+      title: "coolha.com",
+      tag: {
+        zh: "产品",
+        en: "Product",
+      },
+      href: "https://coolha.com/",
+    },
+    taiji: {
+      title: {
+        zh: "太极数字极简主义的设计哲学理念",
+        en: "Taiji Digital Minimalism",
+      },
+      tag: {
+        zh: "技能",
+        en: "Skill",
+      },
+      href: "https://qinjiangban.github.io/taiji-digital-minimalism/",
+    },
+    agentMerchant: {
+      title: {
+        zh: "智能体商家架构师",
+        en: "Agent Commerce Architect",
+      },
+      tag: {
+        zh: "Agent 专家",
+        en: "Agent Expert",
+      },
     },
   },
 
