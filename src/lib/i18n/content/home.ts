@@ -58,6 +58,9 @@ export type HomeContent = {
     agentMerchant: {
       title: LocalizedText;
       tag: LocalizedText;
+      /** 平台标签：WorkBuddy 为专有名词，两种语言一致 */
+      platformTag: string;
+      href: string;
     };
   };
 
@@ -155,6 +158,8 @@ export const homeContent: HomeContent = {
         zh: "Agent 专家",
         en: "Agent Expert",
       },
+      platformTag: "WorkBuddy",
+      href: "https://www.workbuddy.cn/share/asset?shareCode=y5oPOCqNbuuzAv8tZ2Nn2M&sig=wwxzF0TmO6fNW_O2",
     },
   },
 
